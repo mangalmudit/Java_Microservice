@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cloudgateway
+  cloud:
+    gateway:
+      routes:
+        - id: Payment-Service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/**
+server:
+  port: 8989
